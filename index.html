@@ -585,12 +585,12 @@
             <div class="login-form">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Enter your username" value="qabalamurali@outlook.com">
+                    <input type="text" id="username" placeholder="Enter your username">
                 </div>
                 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" value="Sanjay@2014">
+                    <input type="password" id="password" placeholder="Enter your password">
                 </div>
                 
                 <button class="btn btn-primary" onclick="login()">Login</button>
@@ -1174,12 +1174,13 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             
-            if (username && password) {
+            // Check for specific credentials
+            if (username === 'qabalamurali@outlook.com' && password === 'Sanjay@2014') {
                 document.getElementById('login-screen').style.display = 'none';
                 document.getElementById('app-screen').style.display = 'flex';
                 initApp();
             } else {
-                alert('Please enter both username and password');
+                alert('Invalid username or password. Please try again.');
             }
         }
         
